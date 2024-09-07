@@ -33,15 +33,15 @@ public class Main {
 
 
     public static void addBook(String bookName) {
-        addBook(bookName, 0, 0.0);
+        addBook(bookName, 0);
     }
 
     public static void addBook(String bookName, int pageCount) {
-        booksInfo = booksInfo + bookName + " - " + (pageCount > 0 ? pageCount : "N/A") + " стр.\n";
+        addBook(bookName, pageCount, 0);
     }
 
     public static void addBook(String bookName, int pageCount, double price) {
-        booksInfo = booksInfo + bookName + " - " + (pageCount > 0 ? pageCount : "N/A") + " стр. ; " + (price > 0 ? price : "N/A") + " - " + " руб.\n";
+        booksInfo = booksInfo + bookName + " - " + (pageCount > 0 ? pageCount : "N/A") + " стр. ; " + (price > 0 ? price + " - " + " руб" : "N/A" ) + "\n";
     }
 
 
